@@ -49,7 +49,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>2.16.3</upstream.version>
+        <upstream.version>2.16.4</upstream.version>
         <upstream.url>https://github.com/johndyer/mediaelement/archive</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
@@ -84,11 +84,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
-                                <echo message="moving resources" />
+                                <echo message="unzip archive"/>
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/mediaelement-${upstream.version}/build" excludes="jquery.js,*.txt" />
+                                    <fileset dir="${project.build.directory}/mediaelement-${upstream.version}/build" excludes="jquery.js,*.txt"/>
                                 </move>
                             </target>
                         </configuration>
